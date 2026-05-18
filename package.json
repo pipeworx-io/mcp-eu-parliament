@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-eu-parliament",
+  "version": "0.1.0",
+  "description": "European Parliament Open Data — MEPs, plenary docs, sessions",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "eu-parliament"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-eu-parliament"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
