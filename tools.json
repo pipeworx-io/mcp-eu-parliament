@@ -1,0 +1,81 @@
+[
+  {
+    "name": "meps",
+    "description": "List the Members of the European Parliament sitting NOW, filterable by country and political group. Pass `term` to query the historical register instead.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "Member state — country name (\"Ireland\"), ISO2 (\"IE\") or ISO3 (\"IRL\") all work."
+        },
+        "group": {
+          "type": "string",
+          "description": "EP political group. The nine sitting groups are PPE (EPP), S&D, PfE, ECR, Renew, Verts/ALE (Greens), The Left, NI, ESN — pass any of those spellings, or the English name; casing and &/ separators are normalized for you."
+        },
+        "term": {
+          "type": "number",
+          "description": "Parliamentary term number (e.g. 10 = 2024-2029)."
+        },
+        "limit": {
+          "type": "number"
+        },
+        "offset": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "mep",
+    "description": "Single MEP by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "plenary_documents",
+    "description": "Plenary documents.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "term": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string",
+          "description": "e.g. \"REPORT\", \"MOTION_FOR_RESOLUTION\""
+        },
+        "limit": {
+          "type": "number"
+        },
+        "offset": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "session_calendar",
+    "description": "Session calendar.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "term": {
+          "type": "number"
+        },
+        "year": {
+          "type": "number"
+        }
+      }
+    }
+  }
+]
